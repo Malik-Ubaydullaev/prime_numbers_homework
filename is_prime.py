@@ -7,7 +7,7 @@ def is_prime(n:int)->bool:
     Returns:
         bool: True if prime, False if not.
     """
-    for  i in range(2, n):
+    for  i in range(1, n):
         if n % i == 0:
             return False
     return True
