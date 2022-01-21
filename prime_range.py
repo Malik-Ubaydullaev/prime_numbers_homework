@@ -10,7 +10,17 @@ def prime_range(start:int, end:int)->list:
     Returns:
         list: list of prime numbers in range
     """
+    lst = []
+    k = 0
+    for i in range (start, end+1):
+        for j in range (start, i):
+            if i % j == 0:
+                k += 1
+        if k == 0:
+            lst.append(i)
+        else:
+            k = 0
+    return lst
  
-    return 
 
 #Test function.
