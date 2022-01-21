@@ -13,13 +13,8 @@ def prime_range(start:int, end:int)->list:
     lst = []
     k = 0
     for i in range (start, end):
-        for j in range (start, i):
-            if i % j == 0:
-                k += 1
-        if k == 0:
+        if is_prime(i):
             lst.append(i)
-        else:
-            k = 0
     return lst
  
 
